@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanksleuser - Outdoor Event Organizer & Community Banda Aceh</title>
+  <meta name="description"
+    content="Platform resmi Thanksleuser Outdoor Event Organizer & Community Banda Aceh. Cek jadwal open trip, booking kuota, dan sewa alat camping. Seru-Seruan Yuk!">
+
+  <!-- Google Fonts: Bebas Neue for Display Headings & Inter for Body (design.md v2) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- Main Stylesheet & Lenis Smooth Scroll CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Translucent Navigation Header Overlay -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo wanderlush-brand">
+        <img src="icon.png" alt="Thanksleuser" class="brand-icon-img">
+        <span class="brand-name-text">THANKSLEUSER</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link">HOME</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#services" class="nav-link">SERVICES</a></li>
+        <li><a href="#trips" class="nav-link">TOUR</a></li>
+        <li><a href="#merchandise" class="nav-link">MERCHANDISE</a></li>
+        <li><a href="#footer" class="nav-link">CONTACT</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#trips" class="btn-header-pill">Booking Trip</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Buka Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-menu">
+      <li><a href="#hero" class="nav-link mobile-link">HOME</a></li>
+      <li><a href="#about" class="nav-link mobile-link">ABOUT</a></li>
+      <li><a href="#services" class="nav-link mobile-link">SERVICES</a></li>
+      <li><a href="#trips" class="nav-link mobile-link">TOUR</a></li>
+      <li><a href="#merchandise" class="nav-link mobile-link">MERCHANDISE</a></li>
+      <li><a href="#footer" class="nav-link mobile-link">CONTACT</a></li>
+    </ul>
+    <a href="#trips" class="btn btn-primary mobile-link" style="width: 100%; text-align: center;">Booking Trip</a>
+  </div>
+
+  <main>
+    <!-- Hero Section (Wanderlush Inspired Layout) -->
+    <!-- Hero Section (GSAP & Lenis Multi-Layer Parallax Component) -->
+    <section class="hero-section parallax" id="hero">
+      <div class="parallax__header">
+        <div class="parallax__visuals">
+          <div class="parallax__black-line-overflow"></div>
+          <div data-parallax-layers class="parallax__layers">
+            <!-- Layer 1: Background Mountain Range -->
+            <img src="https://cdn.21st.dev/assets/mirror/a4/a43f4eae3459c461345ee676f12d6e1ddca65e8a5279a5af00d475b17ff83aea.webp" loading="eager" width="800" data-parallax-layer="1" alt="Mountain Background" class="parallax__layer-img" />
+            
+            <!-- Layer 2: Midground Mountain Ridge -->
+            <img src="https://cdn.21st.dev/assets/mirror/50/50ca6a0d36d2780bfcb469d6db7eaec0be7e0d2961ba69a63d2a1473b040338d.webp" loading="eager" width="800" data-parallax-layer="2" alt="Mountain Midground" class="parallax__layer-img" />
+            
+            <!-- Layer 3: Title & Authentic Copywriting -->
+            <div data-parallax-layer="3" class="parallax__layer-title">
+              <div class="hero-eyebrow-pill">
+                OUTDOOR EVENT ORGANIZER &amp; COMMUNITY
+              </div>
+              <h1 class="hero-title">
+                Jelajahi Keindahan<br>Rimba Alam Aceh
+              </h1>
+              <p class="hero-subtitle" style="font-size: 16px; color: rgba(255,255,255,0.9); max-width: 580px; margin: 0 auto 28px auto; line-height: 1.6; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                Komunitas &amp; Open Trip Pendakian Gunung Aceh — Savana Siron, Gle Bae, Seulawah Agam &amp; Taman Nasional Leuser.
+              </p>
+              <div class="hero-cta-wrapper">
+                <a href="#trips" class="btn-hero-pill">
+                  Cek Schedule Open Trip
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Layer 4: Foreground Pine Forest -->
+            <img src="https://cdn.21st.dev/assets/mirror/e1/e1c8137b5f971c3b3ec1a0f9e79b9c17018767005f844a10082b890472afecfb.webp" loading="eager" width="800" data-parallax-layer="4" alt="Pine Forest Foreground" class="parallax__layer-img" />
+          </div>
+          <div class="parallax__fade"></div>
+        </div>
+
+        <!-- Top Sub-Bar (Badges Left, Social Stack Right - Below Header) -->
+        <div class="container hero-container">
+          <div class="hero-bottom-bar">
+            <div class="hero-feature-cards">
+              <div class="glass-feature-card">
+                <div class="feature-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="feature-card-text">
+                  Banda Aceh, Indonesia
+                </div>
+              </div>
+
+              <div class="glass-feature-card">
+                <div class="feature-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div class="feature-card-text">
+                  Est. 17 Aug 2025
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-social-stack">
+              <a href="https://instagram.com/thanksleuser" target="_blank" class="social-circle-btn" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="https://wa.me/6282284245086" target="_blank" class="social-circle-btn" aria-label="WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </a>
+              <a href="#dokumentasi" class="social-circle-btn" aria-label="YouTube">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Tentang Thanksleuser) -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="section-tag text-clay">TENTANG THANKSLEUSER</div>
+            <h2 class="about-title">Outdoor Event Organizer & Community Banda Aceh</h2>
+            <p class="body-text about-desc">
+              Didirikan pada 17 Agustus 2025, <strong>Thanksleuser</strong> lahir dari semangat komunitas petualang alam
+              di Banda Aceh. Kami menyelenggarakan open trip camping, pendakian gunung, dan ekspedisi alam terbuka
+              dengan standar keselamatan tinggi dan suasana kekeluargaan yang hangat.
+            </p>
+            <p class="body-text about-desc">
+              Dengan semangat <em>"Seru-Seruan Yuk!"</em>, kami mendampingi pendaki dari berbagai latar belakang—mulai
+              dari pemula yang ingin menikmati indahnya bintang di padang savana hingga pendaki berpengalaman yang
+              menjejaki puncak-puncak eksotis di tanah Aceh.
+            </p>
+
+            <div class="about-stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Peserta Open Trip</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Puncak & Savana</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Safety First Equipment</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">4.9/5</div>
+                <div class="stat-label">Rating Komunitas</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
+              alt="Thanksleuser Expedition Group" class="about-main-img">
+            <div class="about-badge-float">
+              <div class="badge-icon">📍</div>
+              <div>
+                <div style="font-weight: 700; font-size: 14px;">Banda Aceh, Indonesia</div>
+                <div style="font-size: 12px; color: var(--ink-muted);">Basecamp Ekspedisi Outdoor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (The Journey Of Leuser Mountain - Image 3 Layout) -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="journey-header">
+          <div class="journey-header-left">
+            <h2 class="journey-title">The Journey Of<br>Leuser Mountain</h2>
+          </div>
+          <div class="journey-header-right">
+            <p class="body-text journey-desc">
+              This journey offers an unforgettable experience that blends adventure, culture, and natural beauty.
+              Located in the Leuser & Aceh Highlands.
+            </p>
+            <div class="journey-btn-group">
+              <a href="#trips" class="btn-dark-pill">Reminder me</a>
+              <a href="#about" class="btn-outline-pill">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 3 Bento Grid Layout -->
+        <div class="journey-bento-grid">
+          <!-- Card 1: Large Featured Card -->
+          <div class="journey-card journey-card-large"
+            style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');">
+            <div class="journey-card-overlay"></div>
+            <div class="journey-card-top">
+              <span class="badge-most-interesting">Most interesting</span>
+            </div>
+            <div class="journey-card-bottom">
+              <div class="journey-card-subtitle">THE BEAUTY OF LEUSER</div>
+              <h3 class="journey-card-title">Country above the clouds</h3>
+              <div class="avatar-stack">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  alt="Participant" class="avatar-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                  alt="Participant" class="avatar-img">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+                  alt="Participant" class="avatar-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Top Right Card -->
+          <div class="journey-card journey-card-sm"
+            style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80');">
+            <div class="journey-card-overlay"></div>
+            <div class="journey-card-top">
+              <div class="play-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="journey-card-bottom">
+              <div class="journey-card-subtitle">JEEPS & RIDGE TREKKING</div>
+              <h3 class="journey-card-title">Gle Bae Ridge Walk</h3>
+            </div>
+          </div>
+
+          <!-- Card 3: Bottom Row Left -->
+          <div class="journey-card journey-card-sm"
+            style="background-image: url('https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=800&q=80');">
+            <div class="journey-card-overlay"></div>
+            <div class="journey-card-top">
+              <div class="play-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="journey-card-bottom">
+              <div class="journey-card-subtitle">MEMORABLE EXPERIENCE</div>
+              <h3 class="journey-card-title">Hiking on Seulawah</h3>
+            </div>
+          </div>
+
+          <!-- Card 4: Bottom Row Center -->
+          <div class="journey-card journey-card-sm"
+            style="background-image: url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80');">
+            <div class="journey-card-overlay"></div>
+            <div class="journey-card-top">
+              <div class="play-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="journey-card-bottom">
+              <div class="journey-card-subtitle">CULTURE AND TRADITION</div>
+              <h3 class="journey-card-title">Campfire & Aceh Coffee</h3>
+            </div>
+          </div>
+
+          <!-- Card 5: Bottom Row Right -->
+          <div class="journey-card journey-card-sm"
+            style="background-image: url('https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80');">
+            <div class="journey-card-overlay"></div>
+            <div class="journey-card-top">
+              <div class="play-circle-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="journey-card-bottom">
+              <div class="journey-card-subtitle">UNFORGETTABLE EXPERIENCE</div>
+              <h3 class="journey-card-title">Starry Night Camping</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tour Section (A Selection Of Exceptional Open Trips - Reference Image Layout) -->
+    <section class="section tour-section" id="trips">
+      <div class="container">
+        <!-- Centered Main Title -->
+        <div class="tour-header-center">
+          <h2 class="tour-section-title">A Selection Of Exceptional<br>Open Trips</h2>
+        </div>
+
+        <!-- Floating Search & Filter Control Widget (Custom Popovers) -->
+        <div class="tour-search-widget">
+          <!-- Field 1: Date -->
+          <div class="custom-dropdown-container" id="dropdown-container-date">
+            <button type="button" class="custom-dropdown-trigger" id="dropdown-trigger-date">
+              <svg class="widget-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span class="dropdown-label-text" id="label-text-date">Date</span>
+              <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-popover" id="popover-date">
+              <div class="custom-option active" data-value="all" data-label="Date">
+                <span>Semua Tanggal</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="bulan-ini" data-label="Bulan Ini">
+                <span>Bulan Ini</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="bulan-depan" data-label="Bulan Depan">
+                <span>Bulan Depan</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-divider"></div>
+
+          <!-- Field 2: Budget -->
+          <div class="custom-dropdown-container" id="dropdown-container-budget">
+            <button type="button" class="custom-dropdown-trigger" id="dropdown-trigger-budget">
+              <svg class="widget-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                <circle cx="16" cy="14" r="1"></circle>
+              </svg>
+              <span class="dropdown-label-text" id="label-text-budget">Budget</span>
+              <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-popover" id="popover-budget">
+              <div class="custom-option active" data-value="all" data-label="Budget">
+                <span>Semua Harga</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="low" data-label="&lt; Rp 200k">
+                <span>&lt; Rp 200.000</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="mid" data-label="Rp 200k - 350k">
+                <span>Rp 200k - Rp 350k</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="high" data-label="&gt; Rp 350k">
+                <span>&gt; Rp 350.000</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="search-divider"></div>
+
+          <!-- Field 3: Guest / Level -->
+          <div class="custom-dropdown-container" id="dropdown-container-level">
+            <button type="button" class="custom-dropdown-trigger" id="dropdown-trigger-level">
+              <svg class="widget-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span class="dropdown-label-text" id="label-text-level">Guest</span>
+              <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="custom-dropdown-popover" id="popover-level">
+              <div class="custom-option active" data-value="all" data-label="Guest">
+                <span>Semua Level</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="pemula" data-label="Pemula">
+                <span>Pemula</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="menengah" data-label="Menengah">
+                <span>Menengah</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="custom-option" data-value="lanjutan" data-label="Lanjutan">
+                <span>Lanjutan</span>
+                <svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-search-pill" id="btn-search-trigger">Search</button>
+        </div>
+
+        <!-- Category Pill Navigation Bar (Clean Category Only) -->
+        <div class="tour-pill-filter-bar" id="tour-pill-filter-bar">
+          <button class="tour-filter-pill active" data-val="all">All</button>
+          <button class="tour-filter-pill" data-val="camping-savana">Camping Savana</button>
+          <button class="tour-filter-pill" data-val="puncak-hutan-lumut">Puncak Hutan Lumut</button>
+          <button class="tour-filter-pill" data-val="ekstrem-tektok">Ekstrem / Tektok</button>
+        </div>
+
+        <!-- Dynamic Tour Grid Container -->
+        <div class="tour-grid" id="trip-grid-container">
+          <!-- Rendered via JS -->
+        </div>
+
+        <!-- Explore More Trips Button Container -->
+        <div class="explore-more-container" id="explore-more-container" style="text-align: center; margin-top: 36px; display: none;">
+          <button type="button" class="btn-explore-more" id="btn-explore-more">
+            <span id="explore-more-text">Eksplor Trip Lainnya</span>
+            <svg id="explore-more-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 8px; transition: transform 0.3s ease;">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Merchandise Section (Exact Shopee Product Detail Page Layout - Zero Emojis) -->
+    <section class="section" id="merchandise" style="background: #F5F5F5; padding: 30px 0;">
+      <div class="container" style="max-width: 1200px;">
+
+        <!-- Main Shopee PDP Card -->
+        <div class="shopee-pdp-card">
+
+          <!-- Left Column: Gallery Showcase -->
+          <div class="shopee-gallery-col">
+            <!-- Hero Image Preview -->
+            <div class="shopee-hero-wrap">
+              <img id="merch-img-preview" src="images/merch-black.png" alt="Thanksleuser Tactical Oversized T-Shirt">
+            </div>
+
+            <!-- Thumbnail Carousel Bar -->
+            <div class="shopee-thumb-row">
+              <button class="shopee-thumb-nav nav-prev" id="thumb-prev-btn" aria-label="Sebelumnya">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="shopee-thumb-track">
+                <button type="button" class="shopee-thumb-btn active" data-img="images/merch-black.png"
+                  data-color="Hitam">
+                  <img src="images/merch-black.png" alt="Hitam">
+                </button>
+                <button type="button" class="shopee-thumb-btn" data-img="images/merch-olive.png" data-color="Hijau Tua">
+                  <img src="images/merch-olive.png" alt="Hijau Tua">
+                </button>
+                <button type="button" class="shopee-thumb-btn" data-img="images/merch-detail.png">
+                  <img src="images/merch-detail.png" alt="Detail Sablon">
+                </button>
+                <button type="button" class="shopee-thumb-btn"
+                  data-img="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80">
+                  <img
+                    src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80"
+                    alt="Putih">
+                </button>
+                <button type="button" class="shopee-thumb-btn" data-img="images/merch-black.png" data-color="Abu Tua">
+                  <img src="images/merch-black.png" alt="Abu Tua">
+                </button>
+              </div>
+              <button class="shopee-thumb-nav nav-next" id="thumb-next-btn" aria-label="Berikutnya">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Share & Favorite Bar -->
+            <div class="shopee-share-bar">
+              <div class="shopee-social-share">
+                <span>Share:</span>
+                <button type="button" class="btn-share-icon icon-messenger" title="Messenger">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#0084FF">
+                    <path
+                      d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.452 5.502 3.727 7.185V22l3.414-1.874c.905.251 1.864.385 2.859.385 5.523 0 10-4.145 10-9.253C22 6.145 17.523 2 12 2zm1.066 12.443l-2.585-2.757-5.044 2.757 5.549-5.892 2.651 2.757 4.978-2.757-5.549 5.892z" />
+                  </svg>
+                </button>
+                <button type="button" class="btn-share-icon icon-fb" title="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </button>
+                <button type="button" class="btn-share-icon icon-pinterest" title="Pinterest">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#E60023">
+                    <path
+                      d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+                  </svg>
+                </button>
+                <button type="button" class="btn-share-icon icon-twitter" title="Twitter X">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#000000">
+                    <path
+                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="shopee-divider-vert"></div>
+
+              <div class="shopee-favorite-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#FF424F" stroke="#FF424F" stroke-width="1.5">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span>Favorit (13,6RB)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Product Detail & Shopee Options -->
+          <div class="shopee-info-col">
+            <!-- Star+ Badge & Product Title -->
+            <h1 class="shopee-product-title">
+              <span class="shopee-badge-star" style="background: #12160F;">OFFICIAL</span>
+              THANKSLEUSER TACTICAL OVERSIZED T-SHIRT (EXPEDITION SERIES BATCH #4)
+            </h1>
+
+            <!-- Ratings, Reviews & Sales Bar -->
+            <div class="shopee-stats-row">
+              <div class="stat-group">
+                <span class="rating-num">4.9</span>
+                <div class="stars-inline">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#EE4D2D">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#EE4D2D">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#EE4D2D">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#EE4D2D">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="#EE4D2D">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                    </polygon>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-group link-underline">
+                <span class="stat-num">128</span>
+                <span class="stat-label">Penilaian</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-group">
+                <span class="stat-num">254+</span>
+                <span class="stat-label">Terjual</span>
+              </div>
+              <button type="button" class="btn-report-link">Laporkan</button>
+            </div>
+
+            <!-- Price Box Banner -->
+            <div class="shopee-price-banner">
+              <div class="shopee-price-range">Rp150.000</div>
+            </div>
+
+            <!-- Shopee Specs Key-Value Table -->
+            <div class="shopee-options-table">
+
+              <!-- Row 1: Pengiriman -->
+              <div class="shopee-opt-row">
+                <div class="opt-label">Pengiriman</div>
+                <div class="opt-content">
+                  <div class="shipping-info-main">
+                    <svg class="icon-truck" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00BFA5"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="1" y="3" width="15" height="13"></rect>
+                      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                      <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                      <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                    <span>Estimasi 3 - 5 Hari Kerja</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="shipping-subtext">Pengiriman langsung dari Workshop Thanksleuser Banda Aceh.</div>
+                </div>
+              </div>
+
+              <!-- Row 2: Jaminan Brand -->
+              <div class="shopee-opt-row">
+                <div class="opt-label">Garansi & Jaminan</div>
+                <div class="opt-content">
+                  <div class="guarantee-info-row">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE4D2D" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <span>Garansi Retur Size 100% • Heavyweight Cotton 24s • Fast Admin Response</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#757575" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: Warna -->
+              <div class="shopee-opt-row">
+                <div class="opt-label">Warna</div>
+                <div class="opt-content">
+                  <div class="shopee-pills-wrap" id="merch-color-options">
+                    <button type="button" class="shopee-color-pill selected" data-color="Hitam"
+                      data-img="images/merch-black.png">
+                      <img src="images/merch-black.png" alt="Hitam">
+                      <span>Hitam</span>
+                      <svg class="check-mark-badge" width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFFFFF" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </button>
+                    <button type="button" class="shopee-color-pill" data-color="Hijau Tua"
+                      data-img="images/merch-olive.png">
+                      <img src="images/merch-olive.png" alt="Hijau Tua">
+                      <span>Hijau Tua</span>
+                      <svg class="check-mark-badge" width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFFFFF" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </button>
+                    <button type="button" class="shopee-color-pill" data-color="Abu Tua"
+                      data-img="images/merch-detail.png">
+                      <img src="images/merch-detail.png" alt="Abu Tua">
+                      <span>Abu Tua</span>
+                      <svg class="check-mark-badge" width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFFFFF" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </button>
+                    <button type="button" class="shopee-color-pill" data-color="Putih"
+                      data-img="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=200&q=80">
+                      <img
+                        src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=200&q=80"
+                        alt="Putih">
+                      <span>Putih</span>
+                      <svg class="check-mark-badge" width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFFFFF" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </button>
+                    <button type="button" class="shopee-color-pill" data-color="ABU" data-img="images/merch-olive.png">
+                      <img src="images/merch-olive.png" alt="ABU">
+                      <span>ABU</span>
+                      <svg class="check-mark-badge" width="10" height="10" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFFFFF" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 4: Ukuran -->
+              <div class="shopee-opt-row">
+                <div class="opt-label">Ukuran</div>
+                <div class="opt-content">
+                  <div class="shopee-pills-wrap" id="merch-size-options">
+                    <button type="button" class="shopee-size-btn" data-size="S">S</button>
+                    <button type="button" class="shopee-size-btn" data-size="M">M</button>
+                    <button type="button" class="shopee-size-btn" data-size="L">L</button>
+                    <button type="button" class="shopee-size-btn" data-size="XL">XL</button>
+                    <button type="button" class="shopee-size-btn" data-size="XXL">XXL</button>
+                    <button type="button" class="shopee-size-btn" data-size="XXXL">XXXL</button>
+                  </div>
+                  <button type="button" class="shopee-size-link" id="btn-open-size-chart">
+                    Tabel Ukuran &gt;
+                  </button>
+                </div>
+              </div>
+
+              <!-- Row 5: Kuantitas Stepper -->
+              <div class="shopee-opt-row align-center">
+                <div class="opt-label">Kuantitas</div>
+                <div class="opt-content flex-row align-center">
+                  <div class="shopee-stepper">
+                    <button type="button" class="stepper-btn" id="btn-qty-minus">-</button>
+                    <input type="number" id="input-merch-qty" value="1" min="1" max="99">
+                    <button type="button" class="stepper-btn" id="btn-qty-plus">+</button>
+                  </div>
+                  <span class="stock-text">TERSEDIA</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Shopee Action Buttons Row -->
+            <div class="shopee-action-row">
+              <button type="button" class="btn-shopee-cart" id="btn-add-cart-merch">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EE4D2D" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span>Masukkan Keranjang</span>
+              </button>
+
+              <button type="button" class="btn-shopee-buy" id="btn-preorder-merch">
+                Beli Sekarang
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Galeri & Testimoni Section (Seamless 3D Parallax Gallery) -->
+    <section class="section parallax-gallery-section" id="dokumentasi">
+      <div class="container" style="position: relative; z-index: 30; text-align: center; margin-bottom: 30px;">
+        <div class="parallax-header-badge">
+          <span class="badge-dot"></span>
+          <span>DOKUMENTASI EKSPEDISI THANKSLEUSER</span>
+        </div>
+        <h2 class="parallax-header-title">Dokumentasi &amp; Kesan Peserta</h2>
+        <p class="parallax-header-sub">Momen keseruan trip Thanksleuser terdahulu dan cerita dari rekan-rekan pendaki.
+        </p>
+      </div>
+
+      <!-- Scrollable 3D Parallax Stage -->
+      <div class="parallax-scroll-wrapper" id="parallax-scroll-wrapper">
+        <div class="parallax-sticky-viewport">
+          <div class="parallax-banner-card" id="parallax-banner-card">
+            <!-- Ambient Gradient Vignette Overlays -->
+            <div class="parallax-vignette-tb"></div>
+            <div class="parallax-vignette-lr"></div>
+
+            <!-- 3D Matrix Perspective View -->
+            <div class="parallax-matrix-perspective">
+              <div class="parallax-matrix-grid" id="parallax-matrix-grid">
+                <div class="parallax-col" id="para-col-1"></div>
+                <div class="parallax-col" id="para-col-2"></div>
+                <div class="parallax-col" id="para-col-3"></div>
+                <div class="parallax-col" id="para-col-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Testimonials Marquee Section (Multi-Column Infinite Vertical Scroll) -->
+        <div class="testi-marquee-wrapper">
+          <div class="testi-marquee-header">
+            <div class="testi-marquee-badge">Testimonials</div>
+            <h2 class="testi-marquee-title">Apa Kata Mereka</h2>
+            <p class="testi-marquee-subtitle">Pengalaman nyata dari para pendaki yang telah menjelajahi alam Aceh bersama Thanksleuser.</p>
+          </div>
+
+          <div class="testi-marquee-container">
+            <!-- Column 1 (Duration 15s) -->
+            <div class="testi-column testi-col-1">
+              <div class="testi-column-inner">
+                <!-- Item 1 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Pertama kali ikut open trip camping di Savana Siron, penanganan admin ramah dan fasilitas tenda lengkap banget. Ramah pendaki pemula!"</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Rizky Maulana" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Rizky Maulana</div>
+                      <div class="testi-user-role">Peserta Savana Siron</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Implementing safety protocols di Gle Bae beneran jempolan. Guide menguasai medan banget dan humble."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Farhan Alfarisi" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Farhan Alfarisi</div>
+                      <div class="testi-user-role">Peserta Gle Bae Ridge</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Foto & video dokumentasi drone-nya keren parah buat feed IG! Ga nyesel gabung trip Thanksleuser."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Nadia Safira" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Nadia Safira</div>
+                      <div class="testi-user-role">Peserta Camp Jantho</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Duplicate Set for Infinite Loop -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Pertama kali ikut open trip camping di Savana Siron, penanganan admin ramah dan fasilitas tenda lengkap banget. Ramah pendaki pemula!"</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Rizky Maulana" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Rizky Maulana</div>
+                      <div class="testi-user-role">Peserta Savana Siron</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Implementing safety protocols di Gle Bae beneran jempolan. Guide menguasai medan banget dan humble."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Farhan Alfarisi" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Farhan Alfarisi</div>
+                      <div class="testi-user-role">Peserta Gle Bae Ridge</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Foto & video dokumentasi drone-nya keren parah buat feed IG! Ga nyesel gabung trip Thanksleuser."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Nadia Safira" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Nadia Safira</div>
+                      <div class="testi-user-role">Peserta Camp Jantho</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 (Duration 19s) -->
+            <div class="testi-column testi-col-2">
+              <div class="testi-column-inner">
+                <!-- Item 4 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Tektok Seulawah Agam menguras tenaga tapi kepuasan puncaknya luar biasa. Thanksleuser bikin trip berkesan dan solid."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Fahmi Reza" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Fahmi Reza</div>
+                      <div class="testi-user-role">Peserta Seulawah Agam</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Tenda bersih, matras tebal, dan kopi hangat siap tiap pagi. Berasa camping mewah di tengah rimba Aceh."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="Cut Anisa" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Cut Anisa</div>
+                      <div class="testi-user-role">Peserta Blangraweu</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Sangat bersahabat untuk pendaki solo. Datang sendiri pulangnya langsung dapet keluarga baru sesama pendaki!"</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="Daffa Pratama" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Daffa Pratama</div>
+                      <div class="testi-user-role">Peserta Burni Telong</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Duplicate Set for Infinite Loop -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Tektok Seulawah Agam menguras tenaga tapi kepuasan puncaknya luar biasa. Thanksleuser bikin trip berkesan dan solid."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Fahmi Reza" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Fahmi Reza</div>
+                      <div class="testi-user-role">Peserta Seulawah Agam</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Tenda bersih, matras tebal, dan kopi hangat siap tiap pagi. Berasa camping mewah di tengah rimba Aceh."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=80" alt="Cut Anisa" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Cut Anisa</div>
+                      <div class="testi-user-role">Peserta Blangraweu</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Sangat bersahabat untuk pendaki solo. Datang sendiri pulangnya langsung dapet keluarga baru sesama pendaki!"</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80" alt="Daffa Pratama" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Daffa Pratama</div>
+                      <div class="testi-user-role">Peserta Burni Telong</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3 (Duration 17s) -->
+            <div class="testi-column testi-col-3">
+              <div class="testi-column-inner">
+                <!-- Item 7 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Pengalaman ekspedisi Leuser paling epic! Leader sangat profesional dan mengutamakan keselamatan peserta."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80" alt="Teuku Rayhan" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Teuku Rayhan</div>
+                      <div class="testi-user-role">Peserta Ekspedisi Leuser</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 8 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Dapat bimbingan instruktur stargazing saat di savana. Pengalaman liat Milky Way terjelas seumur hidup."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Maya Indah" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Maya Indah</div>
+                      <div class="testi-user-role">Peserta Siron Stargazing</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Item 9 -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Transparansi biaya dan penanganan cepat dari admin bikin tenang dari awal daftar sampai pulang trip."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=120&q=80" alt="Rian Ardiansyah" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Rian Ardiansyah</div>
+                      <div class="testi-user-role">Peserta Bukit Jantha</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Duplicate Set for Infinite Loop -->
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Pengalaman ekspedisi Leuser paling epic! Leader sangat profesional dan mengutamakan keselamatan peserta."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80" alt="Teuku Rayhan" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Teuku Rayhan</div>
+                      <div class="testi-user-role">Peserta Ekspedisi Leuser</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Dapat bimbingan instruktur stargazing saat di savana. Pengalaman liat Milky Way terjelas seumur hidup."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="Maya Indah" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Maya Indah</div>
+                      <div class="testi-user-role">Peserta Siron Stargazing</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testi-card-modern">
+                  <p class="testi-text">"Transparansi biaya dan penanganan cepat dari admin bikin tenang dari awal daftar sampai pulang trip."</p>
+                  <div class="testi-user-row">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=120&q=80" alt="Rian Ardiansyah" class="testi-user-avatar" loading="lazy">
+                    <div class="testi-user-info">
+                      <div class="testi-user-name">Rian Ardiansyah</div>
+                      <div class="testi-user-role">Peserta Bukit Jantha</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alur Pendaftaran (3-Step Editorial Process Flow) -->
+    <section class="section alur-section" id="alur">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="alur-header">
+          <div class="section-tag text-clay">3-STEP REGISTRATION PROCESS</div>
+          <h2 class="alur-title">Cara Bergabung Open Trip</h2>
+          <p class="body-text alur-subtitle">Hanya 3 langkah sederhana dari memilih destinasi impian hingga konfirmasi slot pemberangkatan resmi.</p>
+        </div>
+
+        <!-- Process Timeline Grid -->
+        <div class="stepper-wrapper">
+          <div class="stepper-track-line"></div>
+
+          <div class="stepper-container">
+            <!-- Step Card 1 -->
+            <div class="step-card">
+              <div class="step-card-header">
+                <div class="step-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <span class="step-number-tag">01</span>
+              </div>
+              <div class="step-card-body">
+                <div class="step-card-label">LANGKAH 01</div>
+                <h3 class="step-title">Pilih Trip &amp; Cek Kuota</h3>
+                <p class="step-desc">
+                  Pilih tanggal dan destinasi yang sesuai di daftar trip aktif. Cek sisa kuota yang tersedia secara real-time.
+                </p>
+              </div>
+              <div class="step-card-footer">
+                <span class="step-feature-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Real-time Slot Check
+                </span>
+              </div>
+            </div>
+
+            <!-- Step Card 2 -->
+            <div class="step-card">
+              <div class="step-card-header">
+                <div class="step-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <span class="step-number-tag">02</span>
+              </div>
+              <div class="step-card-body">
+                <div class="step-card-label">LANGKAH 02</div>
+                <h3 class="step-title">Isi Form Data Diri &amp; Safety</h3>
+                <p class="step-desc">
+                  Klik tombol 'Booking Seat', lalu lengkapi data diri, kontak darurat, dan riwayat kesehatan demi keselamatan pendakian.
+                </p>
+              </div>
+              <div class="step-card-footer">
+                <span class="step-feature-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  Safety &amp; Health First
+                </span>
+              </div>
+            </div>
+
+            <!-- Step Card 3 -->
+            <div class="step-card">
+              <div class="step-card-header">
+                <div class="step-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                </div>
+                <span class="step-number-tag">03</span>
+              </div>
+              <div class="step-card-body">
+                <div class="step-card-label">LANGKAH 03</div>
+                <h3 class="step-title">Kirim WA &amp; Konfirmasi</h3>
+                <p class="step-desc">
+                  Sistem akan meng-generate format registrasi otomatis. Kirim ke admin WA kami untuk instruksi pembayaran &amp; slot resmi.
+                </p>
+              </div>
+              <div class="step-card-footer">
+                <span class="step-feature-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Instant WA Direct Admin
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band (Section 9 design.md v2: Foto Malam Berbintang Full-bleed + Floating Inset Photos) -->
+    <section class="cta-band">
+      <div class="container cta-band-grid">
+        <div class="cta-inset-photo cta-inset-left">
+          <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=400&q=80"
+            alt="Hiker">
+        </div>
+
+        <div class="cta-band-content">
+          <h2 class="cta-band-title">Siap Untuk Petualangan Selanjutnya?</h2>
+          <p class="body-text" style="color: rgba(255,255,255,0.9); margin-bottom: 28px;">Jangan biarkan akhir pekanmu
+            berlalu biasa saja. Ambil ranselmu dan nikmati keindahan alam Aceh bersama Thanksleuser.</p>
+          <a href="#trips" class="btn btn-primary" style="padding: 16px 36px; font-size: 16px;">Lihat Jadwal Open
+            Trip</a>
+        </div>
+
+        <div class="cta-inset-photo cta-inset-right">
+          <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=400&q=80"
+            alt="Campfire">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer Section (With Collaborate CTA & Crisp Vector Icons) -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+
+      <!-- Collaborate CTA Banner Box (Image 2 Bento Card Layout) -->
+      <div class="footer-collaborate-banner">
+        <div class="collaborate-content">
+          <div class="collaborate-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>PARTNERSHIP &amp; PRIVATE EXPEDITION</span>
+          </div>
+          <h3 class="collaborate-title">Tertarik Kolaborasi atau Private Trip Custom?</h3>
+          <p class="collaborate-desc">
+            Kami melayani pendampingan private trip ekspedisi, corporate gathering outdoor, sponsorship brand, hingga riset lingkungan di wilayah Aceh &amp; Leuser.
+          </p>
+          <div class="collaborate-actions">
+            <a href="https://wa.me/6282284245086?text=Halo%20Thanksleuser,%20saya%20tertarik%20untuk%20berkolaborasi%20/%20private%20trip" target="_blank" class="btn-collaborate-wa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Chat Admin WhatsApp &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image 2 Inset Photo Right Card -->
+        <div class="collaborate-img-wrap">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Thanksleuser Expedition">
+        </div>
+      </div>
+
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col-brand">
+          <div class="brand-logo footer-brand-logo">
+            <img src="icon.png" alt="Thanksleuser" class="brand-icon-img">
+            <div class="brand-text">
+              <span class="brand-name">THANKSLEUSER</span>
+              <span class="brand-location">Banda Aceh, Indonesia</span>
+            </div>
+          </div>
+          <p class="body-text footer-brand-desc">
+            Outdoor Event Organizer &amp; Community di Banda Aceh. Teman perjalanan alam terpercaya untuk pendakian gunung, camping savana, dan ekspedisi rimba Aceh dengan standar keselamatan tinggi.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigasi -->
+        <div>
+          <div class="footer-col-title">Navigasi Singkat</div>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">Tentang Kami</a></li>
+            <li><a href="#trips" class="footer-link">Jadwal Open Trip</a></li>
+            <li><a href="#merchandise" class="footer-link">Merchandise Pre-Order</a></li>
+            <li><a href="#dokumentasi" class="footer-link">Galeri &amp; Testimoni</a></li>
+            <li><a href="#alur" class="footer-link">Cara Bergabung</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Layanan Kami -->
+        <div>
+          <div class="footer-col-title">Layanan Trip</div>
+          <ul class="footer-links">
+            <li><a href="#trips" class="footer-link">Camping Savana Siron</a></li>
+            <li><a href="#trips" class="footer-link">Gle Bae Ridge Walk</a></li>
+            <li><a href="#trips" class="footer-link">Tektok Seulawah Agam</a></li>
+            <li><a href="#trips" class="footer-link">Ekspedisi Leuser</a></li>
+            <li><a href="https://wa.me/6282284245086" target="_blank" class="footer-link">Sewa Alat Camping</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontak Admin (Single Authoritative Contact List) -->
+        <div>
+          <div class="footer-col-title">Kontak Admin</div>
+          <ul class="footer-contact-list">
+            <li>
+              <a href="https://wa.me/6282284245086?text=Halo%20Admin%20Thanksleuser,%20saya%20ingin%20tanya%20jadwal%20dan%20booking%20trip" target="_blank" class="footer-contact-item">
+                <div class="contact-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                </div>
+                <span>WhatsApp: 0822-8424-5086</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/thanksleuser" target="_blank" class="footer-contact-item">
+                <div class="contact-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <span>Instagram: @thanksleuser</span>
+              </a>
+            </li>
+            <li>
+              <div class="footer-contact-item">
+                <div class="contact-icon-circle">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <span>Basecamp: Banda Aceh, Indonesia</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; 2026 <strong>THANKSLEUSER Banda Aceh</strong>. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Form Pendaftaran Multi-Step Wizard (Image 2 Style Light Theme) -->
+  <div class="modal-overlay" id="booking-modal" aria-hidden="true">
+    <div class="modal-container wizard-modal-container">
+
+      <!-- Modal Top Header -->
+      <div class="modal-header">
+        <div>
+          <div class="form-section-title" style="margin-bottom: 2px;">FORM REGISTRASI PESERTA</div>
+          <h3 id="modal-trip-title" style="font-family: var(--font-body); font-weight: 700; font-size: 22px; color: var(--ink);">[Nama Trip]</h3>
+          <div id="modal-trip-date" class="text-muted" style="font-size: 13px;">[Tanggal Trip]</div>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Tutup Form">&times;</button>
+      </div>
+
+      <!-- Multi-Step Stepper Progress Bar (Image 2 Top Bar) -->
+      <div class="wizard-stepper-bar">
+        <div class="wizard-step-item active" data-step="1">
+          <div class="step-dot">1</div>
+          <span class="step-label">Data Diri</span>
+        </div>
+        <div class="step-connector-line"></div>
+        <div class="wizard-step-item" data-step="2">
+          <div class="step-dot">2</div>
+          <span class="step-label">Kontak Darurat</span>
+        </div>
+        <div class="step-connector-line"></div>
+        <div class="wizard-step-item" data-step="3">
+          <div class="step-dot">3</div>
+          <span class="step-label">Logistics</span>
+        </div>
+      </div>
+
+      <form id="booking-form" novalidate>
+        <div class="modal-body wizard-modal-body">
+
+          <!-- Inner Card Container (Exact Image 2 Box Style) -->
+          <div class="wizard-card">
+
+            <!-- Step Header inside Card -->
+            <div class="wizard-card-header">
+              <h2 id="wizard-step-heading" class="wizard-step-title">Data Diri Peserta</h2>
+              <p id="wizard-step-subheading" class="wizard-step-subtitle">Lengkapi informasi dasar identitas peserta open trip</p>
+            </div>
+
+            <!-- Step 1 Panel: Data Diri -->
+            <div class="wizard-step-panel active" id="step-panel-1">
+              <div class="form-group">
+                <label class="form-label" for="namaLengkap">Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="namaLengkap" class="form-input" placeholder="Sesuai KTP / Identitas" required>
+                <span class="form-error" id="err-namaLengkap">Nama lengkap wajib diisi</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="namaPanggilan">Nama Panggilan <span class="required">*</span></label>
+                <input type="text" id="namaPanggilan" class="form-input" placeholder="Panggilan akrab" required>
+                <span class="form-error" id="err-namaPanggilan">Nama panggilan wajib diisi</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="noWA">Nomor WhatsApp <span class="required">*</span></label>
+                <input type="tel" id="noWA" class="form-input" placeholder="Contoh: 082284245086" required>
+                <span class="form-error" id="err-noWA">Nomor WA wajib angka dan tidak boleh kosong</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="akunIG">Akun Instagram <span class="required">*</span></label>
+                <input type="text" id="akunIG" class="form-input" placeholder="@username" required>
+                <span class="form-error" id="err-akunIG">Username Instagram wajib diisi</span>
+              </div>
+            </div>
+
+            <!-- Step 2 Panel: Data Safety & Kontak Darurat -->
+            <div class="wizard-step-panel" id="step-panel-2">
+              <div class="form-group">
+                <label class="form-label" for="kontakDaruratNama">Nama Kontak Darurat <span class="required">*</span></label>
+                <input type="text" id="kontakDaruratNama" class="form-input" placeholder="Nama orang tua / keluarga" required>
+                <span class="form-error" id="err-kontakDaruratNama">Nama kontak darurat wajib diisi</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="kontakDaruratHubungan">Hubungan <span class="required">*</span></label>
+                <input type="text" id="kontakDaruratHubungan" class="form-input" placeholder="Ayah / Ibu / Kakak / Teman" required>
+                <span class="form-error" id="err-kontakDaruratHubungan">Hubungan kontak darurat wajib diisi</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="kontakDaruratTelp">Nomor Telp Kontak Darurat <span class="required">*</span></label>
+                <input type="tel" id="kontakDaruratTelp" class="form-input" placeholder="Contoh: 08123456789" required>
+                <span class="form-error" id="err-kontakDaruratTelp">Nomor telepon darurat wajib angka</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="riwayatMedis">Riwayat Alergi / Penyakit (Opsional)</label>
+                <input type="text" id="riwayatMedis" class="form-input" placeholder="Asma, Alergi Dingin, dsb. (Kosongkan jika tidak ada)">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="golonganDarah">Golongan Darah <span class="required">*</span></label>
+                <select id="golonganDarah" class="form-select" required>
+                  <option value="">-- Pilih Golongan Darah --</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="AB">AB</option>
+                  <option value="O">O</option>
+                  <option value="Tidak Tahu">Tidak Tahu</option>
+                </select>
+                <span class="form-error" id="err-golonganDarah">Golongan darah wajib dipilih</span>
+              </div>
+            </div>
+
+            <!-- Step 3 Panel: Tambahan & Logistics -->
+            <div class="wizard-step-panel" id="step-panel-3">
+              <div class="form-group">
+                <label class="form-label" for="ukuranKaos">Ukuran Kaos Trip <span class="required">*</span></label>
+                <select id="ukuranKaos" class="form-select" required>
+                  <option value="">-- Pilih Ukuran --</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                </select>
+                <span class="form-error" id="err-ukuranKaos">Ukuran kaos wajib dipilih</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sewaAlat">Sewa Alat Tambahan (Opsional)</label>
+                <select id="sewaAlat" class="form-select">
+                  <option value="Tidak ada">Tidak ada (Membawa perlengkapan sendiri)</option>
+                  <option value="Carrier 60L (+Rp 50.000)">Carrier 60L (+Rp 50.000)</option>
+                  <option value="Sleeping Bag (+Rp 25.000)">Sleeping Bag (+Rp 25.000)</option>
+                  <option value="Tenda Capacity 4 (+Rp 75.000)">Tenda Capacity 4 (+Rp 75.000)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Card Bottom Navigation Bar (Image 2 Footer) -->
+            <div class="wizard-card-footer">
+              <button type="button" class="btn-wizard-back" id="btn-wizard-back" style="display: none;">
+                &lt; Kembali
+              </button>
+              <div style="margin-left: auto; display: flex; gap: 10px; align-items: center;">
+                <button type="button" class="btn-wizard-next" id="btn-wizard-next">
+                  Lanjut &gt;
+                </button>
+                <button type="submit" class="btn-wizard-submit" id="btn-wizard-submit" style="display: none;">
+                  Submit & Kirim via WhatsApp
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Caption (Image 2 Step Indicator Caption) -->
+          <div class="wizard-step-caption" id="wizard-step-caption">
+            Step 1 of 3: Data Diri Peserta
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Size Chart Modal -->
+  <div class="modal-overlay" id="size-chart-modal" aria-hidden="true">
+    <div class="modal-container" style="max-width: 520px;">
+      <div class="modal-header">
+        <div>
+          <div class="form-section-title" style="margin-bottom: 2px;">THANKSLEUSER APPAREL</div>
+          <h3 style="font-family: var(--font-display); font-size: 22px;">Panduan Ukuran (Size Chart)</h3>
+          <div class="text-muted" style="font-size: 13px;">Tactical Oversized T-Shirt (dalam cm)</div>
+        </div>
+        <button class="modal-close-btn" id="size-chart-close-btn" aria-label="Tutup Modal">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 20px 24px;">
+        <table class="size-chart-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Panjang Baju</th>
+              <th>Lebar Dada</th>
+              <th>Panjang Lengan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>S</strong></td>
+              <td>70 cm</td>
+              <td>52 cm</td>
+              <td>22 cm</td>
+            </tr>
+            <tr>
+              <td><strong>M</strong></td>
+              <td>72 cm</td>
+              <td>54 cm</td>
+              <td>23 cm</td>
+            </tr>
+            <tr>
+              <td><strong>L</strong></td>
+              <td>74 cm</td>
+              <td>57 cm</td>
+              <td>24 cm</td>
+            </tr>
+            <tr>
+              <td><strong>XL</strong></td>
+              <td>76 cm</td>
+              <td>60 cm</td>
+              <td>25 cm</td>
+            </tr>
+            <tr>
+              <td><strong>XXL</strong></td>
+              <td>78 cm</td>
+              <td>63 cm</td>
+              <td>26 cm</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size: 12px; color: var(--ink-muted); margin-top: 16px; text-align: center; line-height: 1.4;">
+          <strong>Catatan:</strong> Potongan bersifat <em>Tactical Oversized</em>. Jika Anda lebih menyukai tampilan fit
+          biasa, disarankan memilih 1 size di bawah ukuran standar Anda.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <img id="lightbox-img" src="" alt="Enlarged View">
+  </div>
+
+  <!-- Script Logic & GSAP / Lenis Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "thankslauser",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "npx wrangler pages deploy . --project-name=thankslauser"
+  },
+  "devDependencies": {
+    "wrangler": "^3.100.0"
+  }
+}

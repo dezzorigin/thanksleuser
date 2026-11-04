@@ -1,0 +1,417 @@
+[
+  {
+    "id": "savana-siron-okt-2026",
+    "nama": "Savana Siron Starry Night",
+    "tanggalMulai": "2026-10-17",
+    "tanggalSelesai": "2026-10-18",
+    "harga": 250000,
+    "kuotaTotal": 15,
+    "kuotaTerisi": 12,
+    "batasPendaftaran": "2026-10-12",
+    "kategori": "camping-savana",
+    "tingkatKesulitan": "pemula",
+    "fasilitasTermasuk": [
+      "Guide & Leader Experienced",
+      "Makan 3x (Malam, Pagi, Siang)",
+      "Tenda & Matras Camping",
+      "Kopi, Teh & Snack Hangat",
+      "Dokumentasi Foto High-Res",
+      "P3K & Standard Safety Equipment"
+    ],
+    "wajibBawaSendiri": [
+      "Jaket gunung hangat",
+      "Headlamp / senter",
+      "Obat-obatan pribadi",
+      "Pakaian ganti & perlengkapan mandi",
+      "Jas hujan / poncho"
+    ],
+    "foto": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Nikmati keindahan padang savana hijau Siron yang membentang indah dengan lanskap perbukitan eksotis dan malam bertabur ribuan bintang."
+  },
+  {
+    "id": "gle-bae-okt-2026",
+    "nama": "Gle Bae Ridge Walk & Cloud Sea",
+    "tanggalMulai": "2026-10-24",
+    "tanggalSelesai": "2026-10-25",
+    "harga": 300000,
+    "kuotaTotal": 20,
+    "kuotaTerisi": 8,
+    "batasPendaftaran": "2026-10-20",
+    "kategori": "puncak-hutan-lumut",
+    "tingkatKesulitan": "menengah",
+    "fasilitasTermasuk": [
+      "Guide & Porter Kelompok",
+      "Makan 4x Selama Trip",
+      "Tenda Dome Kapasitas 4",
+      "Dokumentasi Drone & Kamera DSLR",
+      "Standard P3K & Safety"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu trek / sandal gunung",
+      "Jaket waterproof / windproof",
+      "Sleeping bag nyaman",
+      "Headlamp + baterai cadangan",
+      "Peralatan makan & minum pribadi"
+    ],
+    "foto": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Menjejaki pematang punggungan Gle Bae dengan pemandangan lautan awan menakjubkan di pagi hari dan suasana hutan lumut yang magis."
+  },
+  {
+    "id": "seulawah-agam-nov-2026",
+    "nama": "Seulawah Agam One Day Tektok",
+    "tanggalMulai": "2026-11-07",
+    "tanggalSelesai": "2026-11-07",
+    "harga": 350000,
+    "kuotaTotal": 12,
+    "kuotaTerisi": 10,
+    "batasPendaftaran": "2026-11-01",
+    "kategori": "ekstrem-tektok",
+    "tingkatKesulitan": "lanjutan",
+    "fasilitasTermasuk": [
+      "Guide Pro Tektok Seulawah",
+      "Snack & Air Mineral Summit",
+      "Sertifikat Pendakian",
+      "Dokumentasi Foto",
+      "Emergency First Aid"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu hiking / trail running",
+      "Trekking pole",
+      "Headlamp ekstra terang",
+      "Air minum minimal 3 Liter",
+      "Jas hujan emergency"
+    ],
+    "foto": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Tantangan fisik tektok 1 hari menembus hutan tropis lebat Gunung Seulawah Agam hingga kawah aktif dan puncak utama."
+  },
+  {
+    "id": "bukit-jantha-nov-2026",
+    "nama": "Bukit Jantha Sunset & Camping",
+    "tanggalMulai": "2026-11-14",
+    "tanggalSelesai": "2026-11-15",
+    "harga": 180000,
+    "kuotaTotal": 18,
+    "kuotaTerisi": 6,
+    "batasPendaftaran": "2026-11-10",
+    "kategori": "camping-savana",
+    "tingkatKesulitan": "pemula",
+    "fasilitasTermasuk": [
+      "Guide & Camp Crew",
+      "Makan 3x",
+      "Tenda & Matras",
+      "Kopi & Teh Hangat",
+      "Dokumentasi Foto",
+      "P3K Standard"
+    ],
+    "wajibBawaSendiri": [
+      "Jaket hangat",
+      "Senter / Headlamp",
+      "Obat pribadi",
+      "Jas hujan"
+    ],
+    "foto": "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Pemandangan matahari terbenam memukau di perbukitan Jantha dengan suasana malam santai di sekitar api unggun."
+  },
+  {
+    "id": "kuta-malaka-dec-2026",
+    "nama": "Kuta Malaka Ridge & Waterfall",
+    "tanggalMulai": "2026-12-05",
+    "tanggalSelesai": "2026-12-06",
+    "harga": 220000,
+    "kuotaTotal": 16,
+    "kuotaTerisi": 9,
+    "batasPendaftaran": "2026-12-01",
+    "kategori": "puncak-hutan-lumut",
+    "tingkatKesulitan": "menengah",
+    "fasilitasTermasuk": [
+      "Guide Lokal Experienced",
+      "Makan 3x",
+      "Tenda Camping",
+      "Dokumentasi Foto",
+      "Standard P3K"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu / sandal trekking",
+      "Sleeping bag",
+      "Baju ganti",
+      "Jas hujan"
+    ],
+    "foto": "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Menyusuri air terjun bertingkat Kuta Malaka dan punggungan hijau berudara sejuk khas perbukitan tropis Aceh."
+  },
+  {
+    "id": "jantho-pine-dec-2026",
+    "nama": "Jantho Pine Forest River Camp",
+    "tanggalMulai": "2026-12-12",
+    "tanggalSelesai": "2026-12-13",
+    "harga": 195000,
+    "kuotaTotal": 20,
+    "kuotaTerisi": 11,
+    "batasPendaftaran": "2026-12-08",
+    "kategori": "camping-savana",
+    "tingkatKesulitan": "pemula",
+    "fasilitasTermasuk": [
+      "Guide & Crew Camp",
+      "Makan 3x + BBQ Malam",
+      "Tenda & Matras Sponges",
+      "Seduhan Kopi & Teh",
+      "Dokumentasi Foto Canon DSLR",
+      "P3K Kit"
+    ],
+    "wajibBawaSendiri": [
+      "Pakaian santai & hangat",
+      "Sandal outdoor",
+      "Headlamp",
+      "Perlengkapan mandi"
+    ],
+    "foto": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Bermalam di tepi sungai jernih di tengah rimbunnya hutan pinus Jantho dengan aroma segar kayu pinus dan BBQ malam hangat."
+  },
+  {
+    "id": "seulawah-inong-dec-2026",
+    "nama": "Seulawah Inong Summit Traverse",
+    "tanggalMulai": "2026-12-19",
+    "tanggalSelesai": "2026-12-20",
+    "harga": 320000,
+    "kuotaTotal": 14,
+    "kuotaTerisi": 5,
+    "batasPendaftaran": "2026-12-15",
+    "kategori": "ekstrem-tektok",
+    "tingkatKesulitan": "lanjutan",
+    "fasilitasTermasuk": [
+      "Guide Senior Seulawah",
+      "Makan 3x",
+      "Tenda & Logistics",
+      "Dokumentasi High-Res",
+      "Emergency First Aid"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu outdoor pro",
+      "Headlamp terang",
+      "Trekking pole",
+      "Air minum cadangan"
+    ],
+    "foto": "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Eksplorasi puncak Seulawah Inong melalui rute hutan rahasia dengan pemandangan lanskap lembah dan selat Malaka."
+  },
+  {
+    "id": "blangraweu-jan-2027",
+    "nama": "Blangraweu Savana & Stargazing",
+    "tanggalMulai": "2027-01-09",
+    "tanggalSelesai": "2027-01-10",
+    "harga": 275000,
+    "kuotaTotal": 15,
+    "kuotaTerisi": 4,
+    "batasPendaftaran": "2027-01-05",
+    "kategori": "camping-savana",
+    "tingkatKesulitan": "pemula",
+    "fasilitasTermasuk": [
+      "Guide & Stargazing Instructor",
+      "Makan 3x",
+      "Tenda Dome",
+      "Coffee & Tea Bar",
+      "Dokumentasi Foto Night-scape",
+      "P3K Equipment"
+    ],
+    "wajibBawaSendiri": [
+      "Jaket tebal / thermal",
+      "Headlamp",
+      "Personal medicine",
+      "Jas hujan"
+    ],
+    "foto": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Surga savana tersembunyi Aceh dengan spot pengamatan Bima Sakti (Milky Way) terbaik dan udara malam yang segar."
+  },
+  {
+    "id": "cot-gie-jan-2027",
+    "nama": "Cot Gie Mossy Cloud Forest Trek",
+    "tanggalMulai": "2027-01-23",
+    "tanggalSelesai": "2027-01-24",
+    "harga": 290000,
+    "kuotaTotal": 16,
+    "kuotaTerisi": 7,
+    "batasPendaftaran": "2027-01-19",
+    "kategori": "puncak-hutan-lumut",
+    "tingkatKesulitan": "menengah",
+    "fasilitasTermasuk": [
+      "Guide Navigasi Hutan",
+      "Makan 3x Camp",
+      "Tenda Kapasitas 4",
+      "Foto Drone & Raw Files",
+      "Kit P3K Penjelajah"
+    ],
+    "wajibBawaSendiri": [
+      "Gaiter / pelindung kaki",
+      "Sepatu anti slip",
+      "Jas hujan tebal",
+      "Senter kepala"
+    ],
+    "foto": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Sensasi menembus ketebalan hutan lumut pegunungan Cot Gie yang hijau dan basah dengan hamparan kabut tebal menyelimuti puncak."
+  },
+  {
+    "id": "burni-telong-feb-2027",
+    "nama": "Burni Telong Volcano Sunrise",
+    "tanggalMulai": "2027-02-13",
+    "tanggalSelesai": "2027-02-14",
+    "harga": 450000,
+    "kuotaTotal": 15,
+    "kuotaTerisi": 7,
+    "batasPendaftaran": "2027-02-08",
+    "kategori": "puncak-hutan-lumut",
+    "tingkatKesulitan": "menengah",
+    "fasilitasTermasuk": [
+      "Guide Lokal Gayo",
+      "Makan 4x",
+      "Tenda & Logistics",
+      "Kopi Gayo Asli",
+      "Dokumentasi Foto",
+      "Safety First Aid"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu outdoor",
+      "Jaket penahan angin tebal",
+      "Sleeping bag",
+      "Headlamp"
+    ],
+    "foto": "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Pendakian gunung berapi aktif Burni Telong di dataran tinggi Gayo untuk menyaksikan samudera awan emas saat fajar."
+  },
+  {
+    "id": "laut-tawar-feb-2027",
+    "nama": "Danau Laut Tawar Lakeside Camp",
+    "tanggalMulai": "2027-02-27",
+    "tanggalSelesai": "2027-02-28",
+    "harga": 230000,
+    "kuotaTotal": 20,
+    "kuotaTerisi": 14,
+    "batasPendaftaran": "2027-02-22",
+    "kategori": "camping-savana",
+    "tingkatKesulitan": "pemula",
+    "fasilitasTermasuk": [
+      "Guide & Camp Officer",
+      "Makan 3x (Ikan Depik Khas Gayo)",
+      "Tenda Waterfront",
+      "Kopi Tubruk Gayo",
+      "Dokumentasi Lengkap",
+      "P3K Standard"
+    ],
+    "wajibBawaSendiri": [
+      "Jaket angin",
+      "Headlamp",
+      "Pakaian hangat",
+      "Kamera / HP charger"
+    ],
+    "foto": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Sensasi mendirikan tenda tepat di pinggir Danau Laut Tawar Takengon dengan lanskap perbukitan pinus mengelilingi danau."
+  },
+  {
+    "id": "abong-abong-mar-2027",
+    "nama": "Abong-Abong Extreme Expedition",
+    "tanggalMulai": "2027-03-20",
+    "tanggalSelesai": "2027-03-23",
+    "harga": 1200000,
+    "kuotaTotal": 10,
+    "kuotaTerisi": 3,
+    "batasPendaftaran": "2027-03-15",
+    "kategori": "ekstrem-tektok",
+    "tingkatKesulitan": "lanjutan",
+    "fasilitasTermasuk": [
+      "Ranger & Guide Ekspedisi Pro",
+      "Makan Full Selama Trip",
+      "Tenda & Emergency Shelter",
+      "Dokumentasi Ekspedisi Complete",
+      "Emergency Satellite & First Aid"
+    ],
+    "wajibBawaSendiri": [
+      "Perlengkapan mountaineering lengkap",
+      "Sepatu trek pro",
+      "Carrier & Raincover",
+      "Personal survival kit"
+    ],
+    "foto": "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Petualangan ekstrem menembus puncak Gunung Abong-Abong dengan pemandangan vegetasi langka dan jalur teknis menantang."
+  },
+  {
+    "id": "peuet-sagoe-apr-2027",
+    "nama": "Peuet Sagoe Volcano Wilderness",
+    "tanggalMulai": "2027-04-10",
+    "tanggalSelesai": "2027-04-13",
+    "harga": 980000,
+    "kuotaTotal": 10,
+    "kuotaTerisi": 4,
+    "batasPendaftaran": "2027-04-05",
+    "kategori": "ekstrem-tektok",
+    "tingkatKesulitan": "lanjutan",
+    "fasilitasTermasuk": [
+      "Guide & Team Ranger",
+      "Logistik & Makan 4 Hari",
+      "Flysheet & Tenda Badai",
+      "Dokumentasi Ekspedisi",
+      "P3K & Emergency Comm"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu pendakian berat",
+      "Carrier 60L+",
+      "Sleeping bag ekstrem",
+      "Headlamp 500 lumens"
+    ],
+    "foto": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Ekspedisi mendalam menuju gunung api misterius Peuet Sagoe Pidie dengan empat puncak kembar nan megah."
+  },
+  {
+    "id": "radar-indrapuri-apr-2027",
+    "nama": "Bukit Radar Indrapuri Ridge Run",
+    "tanggalMulai": "2027-04-24",
+    "tanggalSelesai": "2027-04-25",
+    "harga": 160000,
+    "kuotaTotal": 25,
+    "kuotaTerisi": 18,
+    "batasPendaftaran": "2027-04-20",
+    "kategori": "camping-savana",
+    "tingkatKesulitan": "pemula",
+    "fasilitasTermasuk": [
+      "Leader Trip & Logistics",
+      "Makan 3x",
+      "Tenda Dome",
+      "Teh & Kopi Hangat",
+      "Dokumentasi Foto HP & Mirrorless",
+      "Standard P3K"
+    ],
+    "wajibBawaSendiri": [
+      "Jaket ringan",
+      "Matras pribadi",
+      "Senter",
+      "Jas hujan"
+    ],
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Camping santai keluarga dan pemula di Puncak Radar Indrapuri dengan pemandangan 360 derajat lanskap Aceh Besar."
+  },
+  {
+    "id": "perkison-summit-may-2027",
+    "nama": "Perkison Leuser Buffer Expedition",
+    "tanggalMulai": "2027-05-15",
+    "tanggalSelesai": "2027-05-17",
+    "harga": 750000,
+    "kuotaTotal": 12,
+    "kuotaTerisi": 6,
+    "batasPendaftaran": "2027-05-10",
+    "kategori": "ekstrem-tektok",
+    "tingkatKesulitan": "lanjutan",
+    "fasilitasTermasuk": [
+      "Ranger Taman Nasional Leuser",
+      "Makan 3 Hari Camp",
+      "Tenda Kelompok",
+      "Dokumentasi Foto",
+      "First Aid Complete"
+    ],
+    "wajibBawaSendiri": [
+      "Sepatu gunung pro",
+      "Raincoat tebal",
+      "Headlamp + baterai",
+      "Trekking pole"
+    ],
+    "foto": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80",
+    "deskripsi": "Menjelajahi kawasan penyangga Taman Nasional Gunung Leuser hingga puncak Gunung Perkison Kutacane."
+  }
+]
