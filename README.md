@@ -1,29 +1,39 @@
 # Thanksleuser
 
-Thanksleuser — project by Nabil Aulia Dika (dezzorigin).
+Thanksleuser — project oleh Nabil Aulia Dika (dezzorigin).
 
 ## Status Proyek
 
 **Dalam pengembangan** _(README ada)_
 
-## Tech Stack
+## 📋 Tech Stack
 
 Node.js
 
-## Struktur Proyek
+## 🏗️ Arsitektur
+
+```mermaid
+flowchart LR
+  U[Pengguna] --> B[Browser]
+  B --> S[Static Site]
+```
+
+## 📁 Struktur Proyek
 
 ```
-.gitignore
-README.md
+.wrangler/
 data/
+images/
+public/
+LICENSE
+PRD.md
+README.md
 design.md
 favicon.ico
 icon.png
-images/
 index.html
 package.json
 prd.md
-public/
 script.js
 skills_output.txt
 style.css
@@ -32,16 +42,21 @@ thanksleuser-spec-02.md
 wrangler.toml
 ```
 
-## Getting Started
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
 npm install
+
+# Jalankan development server
 npm run dev
 ```
 
-## Lisensi
+> Untuk project HTML/Python/Go, lihat instruksi di atas atau file konfigurasi.
 
-MIT — lihat file [LICENSE](./LICENSE).
+## 📄 Lisensi
+
+MIT — lihat [LICENSE](./LICENSE).
 
 ---
-_Dibuat dan dikelola oleh Nabil Aulia Dika. Kontribusi dan issue welcome._
+_Dikembangkan oleh **dezzorigin** (Nabil Aulia Dika)._
