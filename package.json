@@ -1,5 +1,8 @@
 {
   "description": "Thanksleuser — Outdoor Event Organizer & Community Banda Aceh: landing page + booking engine open trip (situs statis, tanpa backend; booking & pre-order dikirim sebagai pesan WhatsApp ke admin).",
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
     "@playwright/test": "^1.65.1",
     "html-validate": "^11.21.1",

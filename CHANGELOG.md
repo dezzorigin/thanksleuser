@@ -50,6 +50,9 @@ tetap berakhir di WhatsApp admin.
   thumbnail galeri ditambah foto sablon belakang yang sebelumnya tak terpakai.
 - Badge status kartu nyaris tak terbaca di foto terang — kini chip putih pekat.
 - `README.md` mengklaim `npm run dev` yang tidak ada.
+- CI: `html-validate` 11.21.1 crash di Node 20 (`fs.globSync` tidak ada —
+  butuh Node ≥ 22) — CI kini memakai Node 24, `package.json` mengunci
+  `engines.node >= 22`.
 
 ### Removed
 - `.wrangler/` ter-commit (berisi ID akun Cloudflare) — dihapus dari tree,
