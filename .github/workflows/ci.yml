@@ -43,7 +43,10 @@ jobs:
             curl -fsS -o /dev/null http://127.0.0.1:8329/ && break
             sleep 0.5
           done
-          curl -fsS http://127.0.0.1:8329/ | grep -q "Thanksleuser - Outdoor Event Organizer"
+          # Jangan `curl | grep -q`: grep -q menutup pipe begitu cocok,
+          # curl lalu mati SIGPIPE (exit 23) dan pipefail menggagalkan step.
+          curl -fsS http://127.0.0.1:8329/ -o /tmp/smoke-home.html
+          grep -q "Thanksleuser - Outdoor Event Organizer" /tmp/smoke-home.html
           curl -fsS http://127.0.0.1:8329/data/trips.json | python3 -c "import json,sys; d=json.load(sys.stdin); assert len(d)==15, len(d)"
           for p in style.css script.js images/merch-black.png icon.png favicon.ico; do
             curl -fsS -o /dev/null "http://127.0.0.1:8329/$p"
