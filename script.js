@@ -180,12 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchKategori = currentFilters.kategori === 'all' || trip.kategori === currentFilters.kategori;
       const matchKesulitan = currentFilters.tingkatKesulitan === 'all' || trip.tingkatKesulitan === currentFilters.tingkatKesulitan;
 
+      // Filter tanggal: "bulan-ini" = berangkat di bulan berjalan,
+      // "bulan-depan" = berangkat di bulan berikutnya (berdasar tanggalMulai).
+      let matchDate = true;
+      if (currentFilters.date === 'bulan-ini' || currentFilters.date === 'bulan-depan') {
+        const now = new Date();
+        const start = new Date(trip.tanggalMulai);
+        const targetMonth = currentFilters.date === 'bulan-ini'
+          ? now.getMonth()
+          : (now.getMonth() + 1) % 12;
+        const targetYear = currentFilters.date === 'bulan-ini'
+          ? now.getFullYear()
+          : (now.getMonth() === 11 ? now.getFullYear() + 1 : now.getFullYear());
+        matchDate = start.getMonth() === targetMonth && start.getFullYear() === targetYear;
+      }
+
       let matchBudget = true;
       if (currentFilters.budget === 'low') matchBudget = trip.harga < 200000;
       else if (currentFilters.budget === 'mid') matchBudget = trip.harga >= 200000 && trip.harga <= 350000;
       else if (currentFilters.budget === 'high') matchBudget = trip.harga > 350000;
 
-      return matchKategori && matchKesulitan && matchBudget;
+      return matchKategori && matchKesulitan && matchDate && matchBudget;
     });
 
     if (filteredTrips.length === 0) {
@@ -209,12 +224,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const isBookable = status.isBookable;
       const btnText = isBookable ? 'Booking Slot' : status.label;
       const btnDisabled = !isBookable ? 'disabled' : '';
+      const sisaKuota = trip.kuotaTotal - trip.kuotaTerisi;
+      const persenTerisi = Math.min(100, Math.round((trip.kuotaTerisi / trip.kuotaTotal) * 100));
+      const fillClass = (status.code === 'closed' || status.code === 'soldout')
+        ? 'fill-danger' : status.code === 'warning' ? 'fill-warning' : 'fill-success';
+      const quotaNote = status.code === 'closed' ? 'Pendaftaran ditutup'
+        : status.code === 'soldout' ? 'Kuota habis'
+        : `Sisa ${sisaKuota} slot`;
 
       return `
         <div class="tour-card" data-trip-id="${trip.id}">
           <img src="${trip.foto}" alt="${trip.nama}" class="tour-card-bg" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80';">
           
           <div class="tour-card-top">
+            <span class="card-status-badge ${status.badgeClass}">${status.label}</span>
             <div class="tour-rating-badge">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="#FFC107">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -224,22 +247,40 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="tour-card-bottom-glass">
-            <div class="tour-info-left">
-              <h3 class="tour-card-title">${trip.nama}</h3>
-              <div class="tour-location">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                ${lokasiText}
+            <div class="tour-card-main-row">
+              <div class="tour-info-left">
+                <h3 class="tour-card-title">${trip.nama}</h3>
+                <div class="tour-location">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  ${lokasiText}
+                </div>
+                <div class="tour-date">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  ${formatDateRange(trip.tanggalMulai, trip.tanggalSelesai)}
+                </div>
+              </div>
+              <div class="tour-action-right">
+                <div class="tour-price">${formatRupiah(trip.harga)}</div>
+                <button class="btn-card-book" ${btnDisabled}>
+                  ${btnText}
+                  ${isBookable ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>` : ''}
+                </button>
               </div>
             </div>
-            <div class="tour-action-right">
-              <div class="tour-price">${formatRupiah(trip.harga)}</div>
-              <button class="btn-card-book" ${btnDisabled}>
-                ${btnText}
-                ${isBookable ? `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>` : ''}
-              </button>
+            <div class="quota-container">
+              <div class="quota-header">
+                <span class="quota-label">${trip.kuotaTerisi}/${trip.kuotaTotal} peserta terisi</span>
+                <span class="quota-count">${quotaNote}</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill ${fillClass}" style="width: ${persenTerisi}%"></div></div>
             </div>
           </div>
         </div>
@@ -268,11 +309,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function attachCardEventListeners() {
     document.querySelectorAll('.tour-card').forEach(card => {
+      // Klik kartu = buka detail trip (kuota, fasilitas, checklist).
       card.addEventListener('click', () => {
-        const tripId = card.getAttribute('data-trip-id');
-        const trip = allTripsData.find(t => t.id === tripId);
-        if (trip) openBookingModal(trip);
+        const trip = allTripsData.find(t => t.id === card.getAttribute('data-trip-id'));
+        if (trip) openTripDetail(trip);
       });
+      // Tombol di kartu = langsung ke form booking (tanpa lewat detail).
+      const bookBtn = card.querySelector('.btn-card-book');
+      if (bookBtn) {
+        bookBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const trip = allTripsData.find(t => t.id === card.getAttribute('data-trip-id'));
+          if (trip && getTripStatus(trip).isBookable) openBookingModal(trip);
+        });
+      }
     });
   }
 
@@ -512,13 +562,13 @@ document.addEventListener('DOMContentLoaded', () => {
     updateWizardUI(1);
 
     bookingModal.classList.add('open');
-    bookingModal.setAttribute('aria-hidden', 'false');
+    bookingModal.inert = false;
     document.body.style.overflow = 'hidden';
   }
 
   function closeBookingModal() {
     bookingModal.classList.remove('open');
-    bookingModal.setAttribute('aria-hidden', 'true');
+    bookingModal.inert = true;
     document.body.style.overflow = '';
   }
 
@@ -573,6 +623,110 @@ Mohon instruksi transfer dan konfirmasi slot.`;
 
     window.open(waURL, '_blank');
     closeBookingModal();
+  });
+
+  // 4b. Trip Detail Modal + Equipment Checklist (FR-1 + FR-3)
+  // Checklist "Wajib Bawa Sendiri" adalah pengingat pribadi: state-nya
+  // disimpan di localStorage per trip, tidak terkirim ke mana pun.
+  const detailModal = document.getElementById('trip-detail-modal');
+  const detailCloseBtn = document.getElementById('detail-close-btn');
+  const detailBookingBtn = document.getElementById('detail-booking-btn');
+  let detailTrip = null;
+
+  function checklistKey(tripId) { return `thanksleuser:checklist:${tripId}`; }
+
+  function loadChecklist(tripId) {
+    try {
+      const raw = JSON.parse(localStorage.getItem(checklistKey(tripId)) || '[]');
+      return Array.isArray(raw) ? raw : [];
+    } catch { return []; }
+  }
+
+  function saveChecklist(tripId, checked) {
+    try { localStorage.setItem(checklistKey(tripId), JSON.stringify(checked)); } catch { /* storage penuh / privat: checklist jalan sesi ini saja */ }
+  }
+
+  function openTripDetail(trip) {
+    detailTrip = trip;
+    const status = getTripStatus(trip);
+    const sisaKuota = trip.kuotaTotal - trip.kuotaTerisi;
+    const persenTerisi = Math.min(100, Math.round((trip.kuotaTerisi / trip.kuotaTotal) * 100));
+    const fillClass = (status.code === 'closed' || status.code === 'soldout')
+      ? 'fill-danger' : status.code === 'warning' ? 'fill-warning' : 'fill-success';
+
+    document.getElementById('detail-trip-title').textContent = trip.nama;
+    document.getElementById('detail-trip-date').textContent =
+      `Tanggal: ${formatDateRange(trip.tanggalMulai, trip.tanggalSelesai)} | Harga: ${formatRupiah(trip.harga)} | Batas daftar: ${new Date(trip.batasPendaftaran).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+    const img = document.getElementById('detail-trip-img');
+    img.src = trip.foto;
+    img.alt = trip.nama;
+    document.getElementById('detail-trip-desc').textContent = trip.deskripsi || '';
+    document.getElementById('detail-quota').innerHTML = `
+      <div class="quota-header">
+        <span class="quota-label">${trip.kuotaTerisi}/${trip.kuotaTotal} peserta terisi</span>
+        <span class="quota-count">${status.label}</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill ${fillClass}" style="width: ${persenTerisi}%"></div></div>
+      <p style="font-size: 12px; color: var(--ink-muted); margin-top: 6px;">${status.isBookable ? `Sisa ${sisaKuota} slot — batas pendaftaran ${new Date(trip.batasPendaftaran).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}.` : 'Trip ini sudah tidak bisa dibooking.'}</p>`;
+
+    document.getElementById('detail-include-tags').innerHTML =
+      (trip.fasilitasTermasuk || []).map(f => `<span class="included-tag">${f}</span>`).join('');
+
+    const checked = loadChecklist(trip.id);
+    const gearList = document.getElementById('detail-gear-list');
+    gearList.innerHTML = (trip.wajibBawaSendiri || []).map((item, idx) => {
+      const isChecked = checked.includes(item);
+      return `<li class="checklist-item${isChecked ? ' checked' : ''}">
+        <input type="checkbox" id="gear-${trip.id}-${idx}" data-item="${item.replace(/"/g, '&quot;')}"${isChecked ? ' checked' : ''}>
+        <label for="gear-${trip.id}-${idx}"><span>${item}</span></label>
+      </li>`;
+    }).join('');
+    gearList.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const item = cb.getAttribute('data-item');
+        let next = loadChecklist(trip.id);
+        if (cb.checked) { if (!next.includes(item)) next.push(item); }
+        else { next = next.filter(x => x !== item); }
+        saveChecklist(trip.id, next);
+        cb.closest('.checklist-item').classList.toggle('checked', cb.checked);
+      });
+    });
+
+    if (detailBookingBtn) {
+      detailBookingBtn.disabled = !status.isBookable;
+      detailBookingBtn.textContent = status.isBookable ? 'Booking Slot Trip Ini' : status.label;
+    }
+
+    detailModal.classList.add('open');
+    detailModal.inert = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeTripDetail() {
+    detailModal.classList.remove('open');
+    detailModal.inert = true;
+    document.body.style.overflow = '';
+    detailTrip = null;
+  }
+
+  if (detailCloseBtn) detailCloseBtn.addEventListener('click', closeTripDetail);
+  if (detailModal) detailModal.addEventListener('click', (e) => {
+    if (e.target === detailModal) closeTripDetail();
+  });
+  if (detailBookingBtn) detailBookingBtn.addEventListener('click', () => {
+    if (!detailTrip || !getTripStatus(detailTrip).isBookable) return;
+    const trip = detailTrip;
+    closeTripDetail();
+    openBookingModal(trip);
+  });
+
+  // Lipat/buka dua kotak checklist di modal detail.
+  document.querySelectorAll('#trip-detail-modal .checklist-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const box = btn.closest('.checklist-box');
+      const content = box && box.querySelector('.checklist-content');
+      if (content) content.classList.toggle('open');
+    });
   });
 
   // 5. Merchandise Handlers (Exact Shopee PDP Interactivity - Zero Emojis)
@@ -736,20 +890,20 @@ Halo Admin Thanksleuser, saya ingin melakukan Pre-Order kaos official edisi terb
   if (btnOpenSizeChart && sizeChartModal) {
     btnOpenSizeChart.addEventListener('click', () => {
       sizeChartModal.classList.add('open');
-      sizeChartModal.setAttribute('aria-hidden', 'false');
+      sizeChartModal.inert = false;
     });
 
     if (sizeChartCloseBtn) {
       sizeChartCloseBtn.addEventListener('click', () => {
         sizeChartModal.classList.remove('open');
-        sizeChartModal.setAttribute('aria-hidden', 'true');
+        sizeChartModal.inert = true;
       });
     }
 
     sizeChartModal.addEventListener('click', (e) => {
       if (e.target === sizeChartModal) {
         sizeChartModal.classList.remove('open');
-        sizeChartModal.setAttribute('aria-hidden', 'true');
+        sizeChartModal.inert = true;
       }
     });
   }

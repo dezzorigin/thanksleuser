@@ -301,6 +301,25 @@ h3 {
   color: #FFFFFF;
 }
 
+/* Tautan GitHub di navbar kanan (logo GitHub → repo). Header gelap
+   transparan di atas hero, jadi ikon putih dengan border putih tipis. */
+.github-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #FFFFFF;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.github-nav-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #FFFFFF;
+}
+
 .hamburger-btn {
   display: flex;
   flex-direction: column;
@@ -956,6 +975,18 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   z-index: 3;
+}
+
+/* Badge status di atas foto kartu: latar putih pekat supaya teks berwarna
+   tetap terbaca di foto terang maupun gelap. */
+.tour-card-top .badge-success,
+.tour-card-top .badge-warning,
+.tour-card-top .badge-danger,
+.tour-card-top .badge-closed {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 .badge-warning {
@@ -3833,10 +3864,57 @@ a.footer-contact-item:hover {
   border-radius: 16px;
   padding: 14px 18px;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  color: #FFFFFF;
+  gap: 0;
+}
+
+.tour-card-main-row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   color: #FFFFFF;
   gap: 12px;
+}
+
+.tour-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+}
+
+/* Progress kuota di atas panel kaca gelap: label putih, track putih redup,
+   isi penuh putih (moss terlalu gelap di atas kaca), clay/merah tetap. */
+.tour-card-bottom-glass .quota-container {
+  margin: 10px 0 0;
+}
+
+.tour-card-bottom-glass .quota-label,
+.tour-card-bottom-glass .quota-count {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11.5px;
+}
+
+.tour-card-bottom-glass .progress-track {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.tour-card-bottom-glass .fill-success {
+  background-color: #FFFFFF;
+}
+
+/* Tombol booking di modal detail: nonaktif saat trip sudah ditutup. */
+#detail-booking-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#detail-gear-list label {
+  cursor: pointer;
 }
 
 .tour-info-left {

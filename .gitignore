@@ -7,3 +7,9 @@ __pycache__/
 dist/
 build/
 .DS_Store
+.wrangler/
+.pages-dist/
+test-results/
+playwright-report/
+scripts/.imgcache/
+docs/demo/.segments/
