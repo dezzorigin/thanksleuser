@@ -1,10 +1,15 @@
 # Thanksleuser Web MVP - PRD
 
+> **Status dokumen:** PRD asli (dari `prd.md`, kini dilebur ke sini) + catatan
+> implementasi v1.1.0 di §10. Versi ini menggantikan `PRD.md` template
+> generik dan `prd.md` yang duplikatif — satu PRD saja, di root dan di
+> `docs/` isinya sama.
+
 ## 1. Ringkasan Proyek
 
 Thanksleuser adalah outdoor event organizer di Banda Aceh yang saat ini menjalankan semua operasional trip lewat Instagram dan WhatsApp manual. Tujuan proyek ini: bikin landing page dan booking engine sederhana yang menggantikan sebagian besar kerja manual admin, tanpa mengganti WhatsApp sebagai kanal konfirmasi akhir (karena itu yang sudah dipercaya peserta mereka).
 
-Referensi visual dan token desain ada di `design.md`. Dokumen ini fokus ke requirement fungsional.
+Referensi visual dan token desain ada di `docs/specs/design.md`. Dokumen ini fokus ke requirement fungsional.
 
 ## 2. Masalah yang Diselesaikan
 
@@ -170,3 +175,45 @@ assets/
 - Berkurangnya pertanyaan "masih ada slot?" di kolom komentar dan DM
 - Jumlah submit form pendaftaran per trip
 - Waktu admin yang terpakai untuk rekap data peserta manual berkurang
+
+## 10. Catatan Implementasi v1.1.0 (per 19 Nov 2026)
+
+Bagian ini mencatat apa yang benar-benar ada di kode — termasuk yang
+menyimpang dari §5 — supaya PRD tidak berbohong.
+
+### Yang diperbaiki dari kondisi sebelum proper
+
+| # | Temuan | Perbaikan |
+|---|---|---|
+| 1 | Filter tanggal "Bulan Ini / Bulan Depan" disimpan ke state tapi tidak pernah dipakai `renderTrips()` — dropdown tidak berpengaruh sama sekali | `renderTrips()` kini memfilter berdasar `tanggalMulai` (bulan berjalan / bulan depan, dengan pergantian tahun yang benar). Diuji e2e. |
+| 2 | Section Destinasi mati: `destinasiData` + `renderDestination()` + seluruh CSS `.destinasi-*` ada, tapi HTML `#destinasi-tabs` / `#destinasi-content-container` tidak pernah ditulis | Section `#destinasi` ditambahkan (4 tab: Savana Siron, Gle Bae, Seulawah Agam, Leuser) — memakai data + CSS yang sudah ada, tanpa data baru. |
+| 3 | FR-3 (checklist perlengkapan) tidak ada wujudnya: CSS `.checklist-*` ada, HTML/JS tidak | Modal detail trip baru: klik kartu membuka detail (foto, tanggal, harga, kuota, fasilitas termasuk, checklist "Wajib Bawa Sendiri" yang dicentang dan tersimpan di `localStorage` per trip). Tombol "Booking Slot" di kartu tetap langsung ke form booking. |
+| 4 | Kartu trip tidak menampilkan tanggal dan status kuota (FR-1 minta keduanya); hanya ada nama, lokasi, harga, tombol | Kartu kini menampilkan badge status (Tersedia / Hampir Penuh / Sold Out / Pendaftaran Ditutup), tanggal keberangkatan, dan progress bar kuota (`terisi/total` + sisa slot). |
+| 5 | Klik kartu trip yang sudah ditutup tetap membuka form booking (tombolnya memang disabled, tapi klik kartu lolos) | Klik kartu trip tertutup kini membuka modal detail (tombol booking di detail nonaktif); form booking hanya terbuka untuk trip yang masih bisa dibooking. |
+| 6 | Nama proyek salah ketik di tiga tempat: `thankslauser` (`package.json`, `wrangler.toml`, script `deploy`) | Semua jadi `thanksleuser`. |
+| 7 | `.wrangler/` ter-commit (berisi ID akun Cloudflare) + `skills_output.txt` (dump skill 26 KB) + 3 gambar merch duplikat byte-identik | Dihapus dari tree; `.wrangler/` masuk `.gitignore`. ID akun bukan kredensial (tidak bisa dipakai untuk login), tapi tetap tidak pantas di repo. |
+| 8 | `README.md` mengklaim `npm run dev` yang tidak ada; `CHANGELOG.md` mengklaim Next.js + Supabase yang tidak ada di repo ini | `package.json` kini punya `dev`/`preview`/`validate`/`test`/`screenshots`/`sweep`; CHANGELOG ditulis ulang sesuai kenyataan. |
+| 9 | Pil warna merch "ABU" duplikat "Hijau Tua" (gambar sama persis) | Pil "ABU" dihapus; thumbnail galeri ditambah foto sablon belakang (`images/merch_back_print_*.png`) yang sebelumnya tidak terpakai. |
+
+### Penyimpangan yang disengaja (didokumentasikan, bukan bug)
+
+- **FR-5: "selector ukuran dan warna wajib dipilih sebelum tombol pre-order aktif".**
+  Implementasi memakai default terpilih (warna Hitam, ukuran M) sehingga tombol
+  selalu aktif — pilihan selalu ada, bukan "pilih dulu baru aktif". Alasan:
+  default yang masuk akal lebih ramah di HP daripada tombol mati; admin tetap
+  menerima warna + ukuran eksplisit di pesan WhatsApp. Kalau Nabil/admin mau
+  perilaku ketat (tombol mati sampai pilih), itu perubahan satu baris di
+  `script.js` (`selectedMerchColor`/`selectedMerchSize` mulai `null`).
+- **FR-4: ukuran kaos di form adalah S/M/L/XL/XXL, tapi form juga punya XXXL.**
+  Superset dari PRD; harga kaos tidak berubah per ukuran.
+- **Data trip adalah jadwal nyata Okt 2026–Mei 2027.** Trip yang batas
+  pendaftarannya sudah lewat tampil "Pendaftaran Ditutup" — itu perilaku yang
+  benar per FR-1, bukan data basi. Admin menambah trip baru dengan menambah
+  satu objek ke `data/trips.json` (lihat `docs/USER-GUIDE.md`).
+
+### Yang belum ada (di luar scope v1.1.0)
+
+- Pembayaran online, login peserta, dashboard admin, backend — sesuai §4
+  (tetap di luar MVP; konfirmasi akhir tetap WhatsApp).
+- Foto produk warna Putih masih memakai foto kaos putih generik dari Unsplash
+  (tidak ada foto produk putih asli di repo).

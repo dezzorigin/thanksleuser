@@ -1,0 +1,103 @@
+name: CI
+
+# CI untuk situs statis Thanksleuser (repo #29 — variasi: tanpa build step,
+# karena situs ini murni HTML/CSS/JS tanpa bundler; yang diuji adalah
+# validasi statis + smoke server + e2e Playwright).
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ── Pemeriksaan statis: referensi lokal, skema trips, sapu secret ─────
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check links + skema trips + sapu secret
+        run: node scripts/check-links.mjs
+
+      - name: Validasi HTML (html-validate)
+        # no-inline-style dimatikan di .htmlvalidate.json: situs ini memakai
+        # inline style secara pervasif sejak awal (pola penulis aslinya).
+        run: npx html-validate index.html
+
+      - name: Smoke server (halaman + aset inti 200)
+        run: |
+          set -euo pipefail
+          PORT=8329 node scripts/serve.mjs > /tmp/serve.log 2>&1 &
+          SRV=$!
+          trap 'kill $SRV' EXIT
+          for i in $(seq 1 20); do
+            curl -fsS -o /dev/null http://127.0.0.1:8329/ && break
+            sleep 0.5
+          done
+          # Jangan `curl | grep -q`: grep -q menutup pipe begitu cocok,
+          # curl lalu mati SIGPIPE (exit 23) dan pipefail menggagalkan step.
+          curl -fsS http://127.0.0.1:8329/ -o /tmp/smoke-home.html
+          grep -q "Thanksleuser - Outdoor Event Organizer" /tmp/smoke-home.html
+          curl -fsS http://127.0.0.1:8329/data/trips.json | python3 -c "import json,sys; d=json.load(sys.stdin); assert len(d)==15, len(d)"
+          for p in style.css script.js images/merch-black.png icon.png favicon.ico; do
+            curl -fsS -o /dev/null "http://127.0.0.1:8329/$p"
+          done
+          echo "smoke: / + trips.json (15 trip) + aset inti OK"
+
+  # ── Advisory sweep (OSV batch, tanpa auth) ─────────────────────────────
+  # Pola repo #24–#28: 1 POST ke api.osv.dev/v1/querybatch untuk semua
+  # paket produksi. JANGAN ganti ke GitHub Advisory DB API + GITHUB_TOKEN
+  # (gagal deterministik 401 di CI orteam — token per-job bermasalah).
+  # Repo ini TIDAK punya dependensi produksi (situs statis; wrangler,
+  # Playwright, html-validate semua devDependencies) — sweep memeriksa
+  # 0 paket dan lolos; skrip tetap dijaga sebagai gate bila suatu saat
+  # ada dependensi runtime.
+  advisory-sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: OSV sweep (produksi saja, HIGH/CRITICAL = gagal)
+        run: python3 scripts/advisory-sweep.py
+
+  # ── Playwright e2e (alur produk penuh) ─────────────────────────────────
+  playwright-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run e2e (smoke)
+        run: npx playwright test e2e/smoke.spec.js
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
